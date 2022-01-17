@@ -22,7 +22,7 @@ public class AppService {
         return pagesPrefix;
     }
 
-    private HashMap<String, String> getPageNumber(Integer pageNumber){
+    private HashMap<String, String> getPageNumber(int pageNumber){
         HashMap<String, String> pagesPrefix = new HashMap<>();
         pagesPrefix.put("olx","?page=" + pageNumber);
         pagesPrefix.put("otoDom","&page=" + pageNumber);
@@ -77,7 +77,7 @@ public class AppService {
         return categories;
     }
 
-    public Map<String, List<String>> searchOffers(String city, String category, Integer pageNumber){
+    public Map<String, List<String>> searchOffers(String city, String category, int pageNumber){
         HashMap<String, String> pageNumber1 = getPageNumber(pageNumber);
         Map<String, List<String>> allData = new HashMap<>();
         HttpClient httpClient = getHttpClient();
