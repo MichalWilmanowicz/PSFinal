@@ -31,7 +31,7 @@ public class AppController {
     public Map<String, List<String>> getOffers(){
         String city = "gdansk";
         String category = "mieszkania";
-        Integer i = 1;
+        int i = 1;
         Map<String, List<String>> allData = appService.searchOffers(city, category, pageNumber);
         return allData;
 
